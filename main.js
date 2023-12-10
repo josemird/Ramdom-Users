@@ -56,6 +56,10 @@ buttonDiv.appendChild(button); // <div id="container"><div class="card"><img></i
 
     const person = await solicitudUsuario();
     const hora = await solicitudHora();
+    const time = await Tiempo(hora);
+    const user = await Persona(person);
+    console.log(user);
+    console.log(time);
 
     img.src = `${person.picture.medium}`
     spanName.innerHTML = `<br><strong>Nombre: </strong>${person.name.first} <br>`
@@ -63,6 +67,8 @@ buttonDiv.appendChild(button); // <div id="container"><div class="card"><img></i
     spanPhone.innerHTML = `<strong>Phone: </strong>${person.phone} <br>`
     spanLocation.innerHTML = `<strong>Location: </strong>${person.location.state} <br>`
     spanCurrentTime.innerHTML = `<strong>Current Time: </strong>${hora.hour}:${hora.minute}:${hora.second} <br>`
-})
+    button.innerHTML = `Generar Usuario <br>`;
+    
+});
 
 
