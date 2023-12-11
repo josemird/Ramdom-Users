@@ -17,7 +17,7 @@ export async function solicitudUsuario() {
 
 export async function solicitudHora(){
     await solicitudUsuario();
-    const url = 'https://world-time-by-api-ninjas.p.rapidapi.com/v1/worldtime?city=Madrid';
+    const url = `https://world-time-by-api-ninjas.p.rapidapi.com/v1/worldtime?city=${userCity}`;
     const options = {
 	method: 'GET',
 	headers: {
